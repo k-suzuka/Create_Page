@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu icon styling */
+.menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: red;
+    transition: 0.3s ease;
+}
+
+/* Side menu styling */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    white-space: nowrap;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.side-menu a:hover {
+    background-color: #575757;
+}
+
+.side-menu.open {
+    width: 250px !important; /* !important to force width */
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 0 !important;
+    transition: margin-left 0.5s ease !important;
+    position: relative; /* relative positioning to parent */
+}
+
+.main-content.shift {
+    margin-left: 250px !important; /* Shift to account for menu */
+}
+
+/* Image styling */
+.fixed-image-small, .fixed-image-medium, .fixed-image-large {
+    object-fit: contain;
+}
+
+.fixed-image-large {
+    width: 300px;
+    height: 225px;
+}
+
+.fixed-image {
+    position: relative; /* Ensure images are positioned relative to main content */
+    top: 0;
+    left: 0;
+}
+
+.position-fixed-top-left {
+    left: 100px !important;  /* ハンバーガーメニューのアイコンに被らないように適切な余白を確保 */
+    top: 50px;  /* `top`の位置も明示的に指定 */
+    position: relative !important;  /* 念のため指定 */
+}
+
+.position-fixed-top-left2 {
+    left: 110px !important;  /* 同様に、これもアイコンに被らないように調整 */
+    top: 50px;  /* `top`の位置も明示的に指定 */
+    position: relative !important;  /* 念のため指定 */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2, .modal-content p {
+    color: black;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.open-img {
+    cursor: pointer;
+    margin: 10px;
+}

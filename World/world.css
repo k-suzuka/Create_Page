@@ -1,0 +1,141 @@
+:root {
+    --font-size-large: 2em;
+    --font-size-medium: 1.5em;
+    --font-size-small: 1.2em;
+    --color-primary: white;
+    --color-secondary: black;
+    --color-red: red;
+    --color-gold: gold;
+    --color-silver: silver;
+    --color-gray: gray;
+    --background-color: rgba(255, 255, 255, 0.7); /* 白の半透明背景色 */
+}
+
+/* 基本のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url('test.png'); /* 背景画像を読み込む */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* 背景画像を固定 */
+    color: var(--color-primary);
+}
+
+/* ハンバーガーメニューアイコン */
+.menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000; /* ハンバーガーメニューが他の要素より前面になるように調整 */
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-red);
+    transition: 0.3s;
+}
+
+/* サイドメニュー */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999; /* サイドメニューが他の要素より前面になるように調整 */
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    white-space: nowrap;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px;
+    padding-left: 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--color-primary);
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #575757; /* 背景色の変化 */
+}
+
+.side-menu.open {
+    width: 250px;
+}
+
+/* メインコンテンツ */
+.main-content {
+    transition: margin-left 0.5s;
+}
+
+.main-content.shift {
+    margin-left: 250px; /* サイドメニューが開いた時のシフト量 */
+}
+
+.large-text {
+    text-align: center;
+    font-size: 4em;
+    color: var(--color-red);
+    margin: 20px 0;
+}
+
+/* コンテナのスタイル */
+.content-container {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+p {
+    margin: 10px 0;
+    font-size: var(--font-size-small);
+    line-height: 1.5em;
+    color: var(--color-secondary);
+    background-color: transparent; /* 必要に応じて透明にする */
+}
+
+/* 特定のスタイルをクラスにまとめる */
+.highlight {
+    font-size: var(--font-size-medium);
+    color: var(--color-red);
+}
+
+.highlight-gold {
+    font-size: var(--font-size-medium);
+    color: var(--color-gold);
+}
+
+.highlight-silver {
+    font-size: var(--font-size-medium);
+    color: var(--color-silver);
+}
+
+.highlight-gray {
+    color: var(--color-gray);
+}
+
+.large-highlight {
+    font-size: var(--font-size-large);
+}
+
+.highlight-red {
+    font-size: var(--font-size-medium);
+    color: var(--color-red);
+}

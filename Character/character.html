@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ポップアップ例</title>
+    <link rel="stylesheet" href="character.css">
+    <style>
+        body {
+            background-image: url('test.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon" id="menuIcon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="side-menu" id="sideMenu">
+        <a href="../Top/top.html">ホーム</a>
+        <a href="../World/world.html">世界観</a>
+        <a href="character.html">キャラクター</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <img src="character.png" class="open-img fixed-image-large position-fixed-top-left" data-title="タイトル1" data-content="コンテンツ1" alt="サムネイル1">
+        <img src="character2.png" class="open-img fixed-image-large position-fixed-top-left2" data-title="タイトル2" data-content="コンテンツ2" alt="サムネイル2">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">初期タイトル</h2>
+                <p id="modalContent">初期コンテンツ</p>
+                <button id="closeModalBtn" class="close-modal-btn">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="character.js" defer></script>
+</body>
+</html>
