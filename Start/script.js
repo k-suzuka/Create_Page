@@ -4,10 +4,7 @@ const cursor = document.getElementById('cursor');
 const specialTextContainer = document.createElement('span');
 
 // タイピングするテキスト
-const text = "現実はこの世界よりも残酷で、無情で、悲劇的かもしれない。\nそれでも抗い続ける。\nキミの元へ帰るために";
-
-// 特定の文字列
-specialTextContainer.innerHTML = '<span>────。</span>';
+const text = "これは問題なく動作しているかのテストです。\n順序通りに文章が表示されていきます。\n確認できていれば幸いです。";
 specialTextContainer.id = 'line';
 
 let index = 0;

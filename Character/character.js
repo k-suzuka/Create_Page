@@ -7,14 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modalTitle');
     const modalContent = document.getElementById('modalContent');
     const closeModalBtn = document.getElementById('closeModalBtn');
-    const spanClose = document.querySelector('.modal .close');
 
     menuIcon.addEventListener('click', () => {
         sideMenu.classList.toggle('open');
         mainContent.classList.toggle('shift');
-        console.log('sideMenu classes after toggle:', sideMenu.classList);
-        console.log('mainContent classes after toggle:', mainContent.classList);
-        // mainContent.marginLeftの値をログに出力
         setTimeout(() => {
             console.log('mainContent margin-left:', getComputedStyle(mainContent).marginLeft);
         }, 500); // 500ms待ってからログを出力（アニメーションの終了後）
@@ -33,11 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 閉じるボタンでモーダルを閉じる
     closeModalBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // ×アイコンでモーダルを閉じる
-    spanClose.addEventListener('click', () => {
         modal.style.display = 'none';
     });
 
